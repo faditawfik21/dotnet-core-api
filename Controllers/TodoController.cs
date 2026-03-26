@@ -32,6 +32,7 @@ namespace TodoApi.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<TodoItem>>> GetTodoItem()
         {
+            System.Console.WriteLine("--> FADI: Someone requested the Todo list!"); 
             return await _context.TodoItems.ToListAsync();
         }
 
